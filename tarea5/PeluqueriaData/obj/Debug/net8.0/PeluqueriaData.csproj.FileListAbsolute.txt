@@ -1,0 +1,14 @@
+C:\Users\To\source\repos\PeluqueriaData\bin\Debug\net8.0\PeluqueriaData.deps.json
+C:\Users\To\source\repos\PeluqueriaData\bin\Debug\net8.0\PeluqueriaData.runtimeconfig.json
+C:\Users\To\source\repos\PeluqueriaData\bin\Debug\net8.0\PeluqueriaData.dll
+C:\Users\To\source\repos\PeluqueriaData\bin\Debug\net8.0\PeluqueriaData.pdb
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\PeluqueriaData.csproj.AssemblyReference.cache
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\PeluqueriaData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\PeluqueriaData.AssemblyInfoInputs.cache
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\PeluqueriaData.AssemblyInfo.cs
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\PeluqueriaData.csproj.CoreCompileInputs.cache
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\PeluqueriaData.dll
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\refint\PeluqueriaData.dll
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\PeluqueriaData.pdb
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\PeluqueriaData.genruntimeconfig.cache
+C:\Users\To\source\repos\PeluqueriaData\obj\Debug\net8.0\ref\PeluqueriaData.dll
