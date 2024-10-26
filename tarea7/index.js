@@ -13,12 +13,12 @@ const servicios = [
 const usuarios = [
   {
     id: 1,
-    nombre: 'Luciana Gennari',
+    nombre: 'Julian Rago',
 
   },
   {
     id: 2,
-    nombre: 'Rago Tomas',
+    nombre: 'Tomas Rago',
 
   },
 ];
@@ -113,31 +113,32 @@ function cargarTurno() {
 
 async function consultarTurnos() {
 
-  await loadContent('./consultarTurnos.html').then(() => {
-    console.log(document.querySelector('#table'));
-    const $tableBody = document.querySelector('#table > tbody');
+  await loadContent('./consultarTurnos.html');
+  console.log(document.querySelector('#table'));
+  const $tableBody = document.querySelector('#table > tbody');
 
 
-    turnos.forEach(turnos => {
+  turnos.forEach(turno => {
+    
+    const row = document.createElement('tr');
+    const tdCliente = document.createElement('td');
+    const tdFecha = document.createElement('td');
+    const tdHora = document.createElement('td');
+    const tdServicios = document.createElement('td');
+
+    
       
-      const row = document.createElement('tr');
-      const tdCliente = document.createElement('td');
-      const tdFecha = document.createElement('td');
-      const tdHora = document.createElement('td');
-      const tdServicios = document.createElement('td');
+    
+    tdCliente.innerHTML = usuarios.find(u => u.id == turno.idCliente).nombre;
+    tdFecha.innerHTML = turno.fecha;
+    tdHora.innerHTML = turno.hora;
+    let array = [];
+    array = turno.servicios.filter( servicio => servicio.id !== 0).map(servicio => servicio.id);
 
-      tdCliente.innerHTML = usuarios.find(user => user.id === turnos.idCliente).nombre;
-      tdFecha.innerHTML = turnos.fecha;
-      tdHora.innerHTML = turnos.hora;
-      let array = [];
-      array = turnos.servicios.filter( servicio => servicio.id !== 0).map(servicio => servicio.id);
-
-      tdServicios.innerHTML = array.map(id => `${servicios.find(s => s.id === id).nombre}`).join(', ');
-      row.append(tdCliente, tdFecha, tdHora, tdServicios);
-      $tableBody.appendChild(row);
-    })
-  });
-  
+    tdServicios.innerHTML = array.map(id => `${servicios.find(s => s.id == id).nombre}`).join(', ');
+    row.append(tdCliente, tdFecha, tdHora, tdServicios);
+    $tableBody.appendChild(row);
+  })
 }
 
 async function dashboard() {
@@ -150,7 +151,7 @@ async function dashboard() {
   usuarios.forEach(user => {
     cantTurnos.push({
       id: user.id,
-      cant: turnos.filter(turno => turno.idCliente === user.id).length
+      cant: turnos.filter(turno => turno.idCliente == user.id).length
     })
   })
 
@@ -158,7 +159,7 @@ async function dashboard() {
     const row = document.createElement('tr');
     const tdCliente = document.createElement('td');
     const tdTurnos = document.createElement('td');
-    tdCliente.innerHTML = usuarios.find(usuario => usuario.id === cliente.id).nombre;
+    tdCliente.innerHTML = usuarios.find(usuario => usuario.id == cliente.id).nombre;
     tdTurnos.innerHTML = cliente.cant;
     row.append(tdCliente, tdTurnos);
     $tableBody.appendChild(row);
